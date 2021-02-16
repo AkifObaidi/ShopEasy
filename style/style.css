@@ -2,6 +2,12 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 .signin-body{
     margin: 0px;
     padding: 0px;
@@ -78,11 +84,62 @@
     background: none;
     color: #EC4646;
 }
-@media(max-width:1200px){
-    .signin-body{
-        grid-template-columns: 90% 10%;
-    }
+
+.header{
+    width: 100%;
+    background-color: #EC4646;
+    box-shadow: 2px 2px 2px 2px grey;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0px;
+    height: 90px;
+    box-sizing: border-box;
 }
+
+.logo-img{
+    width: 120px;
+    height: 100%;
+}
+
+.serach-container{
+    width: 70%;
+}
+
+.serach-input{
+    width: 100%;
+    background-color: #F7F8F9;
+    border: none;
+    outline: none;
+    border-radius:10px;
+    font-size: 20px;
+    line-height: 42px;
+    padding: 10px;
+    border: 1px solid #D4E3E7;
+    box-shadow: 1px 1px 1px 1px grey;
+    display: inline-block;
+
+}
+
+.serach-btn{
+    width: 70px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    background-color: #EC4646;
+    position: relative;
+    top: -55px;
+    float: right;
+    outline: none;
+    cursor: pointer;
+}
+
+.profile-img{
+    width: 40px;
+    height: 100%;
+    cursor: pointer;
+}
+/*Responsive*/
+
 @media(max-width:1200px){
     .signin-body{
         grid-template-columns: 100% 0%;
@@ -113,5 +170,50 @@
         height: 70px;
         font-size: 20px;
 
+    }
+}
+
+@media(max-width:800px){
+    .signin-body{
+        grid-template-columns: 90% 10%;
+    }
+    .serach-container{
+        text-align: center;
+    }
+    .serach-input{
+        width:60%;
+        height: 50%;
+        margin-top: 8px;
+    }
+    .serach-btn{
+        position: relative;
+        top: 13px;
+        right: 28%;
+    }
+    
+}
+
+@media(max-width:400px){
+    .profile-img{
+        width: 30px;
+    }
+    .serach-input{
+        width:60%;
+        height: 20%;
+        margin-top: 20px;
+    }
+    .serach-btn{
+        width: 30px;
+        height: 30px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .serach-img{
+        height: 12px;
+    }
+    .logo-img{
+        width: 90px;
+        height: 80%;
+        margin-top: 10px;
     }
 }
